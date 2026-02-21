@@ -1,0 +1,195 @@
+:root {
+  /* -------- NEW COLOR SYSTEM (GRAPHITE + TEAL) -------- */
+  --bg: #141617;
+  --card: #1c1f21;
+  --text: #f1f3f5;
+  --muted: #a1a8ae;
+  --accent: #2fbf9f;
+  --accent-soft: #66d9c0;
+  --grid: rgba(255, 255, 255, 0.06);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: "Inter", ui-sans-serif, system-ui;
+  background: linear-gradient(180deg, #16191b, #0f1112);
+  color: var(--text);
+}
+
+/* ---------- HEADER ---------- */
+
+.topbar {
+  background: linear-gradient(90deg, #202425, #111314);
+  border-bottom: 1px solid var(--grid);
+  text-align: center;
+  padding: 1.5rem 1rem;
+}
+
+.topbar h1 {
+  margin: 0;
+  font-weight: 600;
+  letter-spacing: .4px;
+}
+
+.subtitle {
+  margin: .4rem 0 0;
+  color: var(--muted);
+  font-size: .95rem;
+}
+
+/* ---------- LAYOUT ---------- */
+
+.layout {
+  display: grid;
+  grid-template-columns: 380px 1fr;
+  gap: 1rem;
+  padding: 1.2rem;
+  align-items: start;
+}
+
+.controls {
+  grid-column: 1;
+  grid-row: 1/span 2;
+}
+
+.viz {
+  grid-column: 2;
+  grid-row: 1;
+}
+
+.chart {
+  grid-column: 2;
+  grid-row: 2;
+}
+
+/* ---------- CARDS ---------- */
+
+.card {
+  background: linear-gradient(180deg, #1f2326, #171a1c);
+  border: 1px solid var(--grid);
+  border-radius: 14px;
+  padding: 1rem;
+  box-shadow: 0 6px 22px rgba(0, 0, 0, .35);
+}
+
+/* ---------- FORM ROWS ---------- */
+
+.row {
+  display: flex;
+  gap: .6rem;
+  flex-wrap: wrap;
+  margin: .5rem 0;
+}
+
+/* ---------- BUTTONS ---------- */
+
+button {
+  background: linear-gradient(135deg, #2fbf9f, #66d9c0);
+  color: #062b26;
+  border: none;
+  padding: .5rem .85rem;
+  border-radius: 9px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: .25s;
+}
+
+button:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 4px 14px rgba(47, 191, 159, .35);
+}
+
+button:disabled {
+  opacity: .4;
+  cursor: not-allowed;
+}
+
+/* ---------- INPUTS ---------- */
+
+input {
+  background: #111415;
+  color: var(--text);
+  border: 1px solid var(--grid);
+  border-radius: 8px;
+  padding: .4rem;
+}
+
+/* ---------- TABLE ---------- */
+
+.matrix-table {
+  border-collapse: collapse;
+  width: 100%;
+}
+
+.matrix-table th,
+.matrix-table td {
+  border: 1px dashed var(--grid);
+  padding: .25rem;
+  text-align: center;
+}
+
+.scroll-x {
+  overflow-x: auto;
+}
+
+/* ---------- GRAPH ---------- */
+
+.viz svg {
+  width: 100%;
+  height: 460px;
+  border: 1px dashed var(--grid);
+  border-radius: 12px;
+  background: radial-gradient(circle, #202324, #0d0f10);
+}
+
+/* ---------- CHART ---------- */
+
+canvas {
+  width: 100% !important;
+  height: 420px !important;
+}
+
+/* ---------- DEVELOPER SECTION ---------- */
+
+.developer {
+  margin: 2rem auto 0;
+  text-align: center;
+  padding: 1.5rem;
+  border-top: 1px solid var(--grid);
+}
+
+.developer h3 {
+  margin: 0;
+  font-weight: 600;
+}
+
+.socials {
+  margin-top: .8rem;
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.socials a {
+  color: var(--accent-soft);
+  text-decoration: none;
+  font-weight: 500;
+  transition: .2s;
+}
+
+.socials a:hover {
+  color: #fff;
+}
+
+/* ---------- FOOTER ---------- */
+
+footer {
+  text-align: center;
+  padding: 1rem;
+  color: var(--muted);
+}
